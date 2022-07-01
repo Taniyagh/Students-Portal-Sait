@@ -1,0 +1,13 @@
+.MenuItems{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;;
+}
+@media(max-width:499px){
+    .MenuItems{
+        flex-flow: column
+    }
+}
