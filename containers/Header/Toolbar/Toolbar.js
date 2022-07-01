@@ -8,7 +8,7 @@ import SignIn from '../../../components/user/signIn/signIn';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import {AuthContext} from '../../../context/Auth/authContext';
 import{ThemeContext} from '../../../context/Theme/themeContext';
-import {withRouter} from 'react-router-dom'
+
 const Toolbar = (props)=>{
     const [showModal,setShowModal] = useState(false);
     const [openSideDrawer,setOpenSideDrawer] = useState(false);
@@ -38,12 +38,7 @@ const Toolbar = (props)=>{
         themeContext.changeTheme();
     }
     let auth = false;
-    let userInfo;
-    if(typeof window!=='undefined')
-    {
-        userInfo = JSON.parse(localStorage.getItem('user'));
-    }
-     
+    const userInfo = JSON.parse(localStorage.getItem('user'));
     if(userInfo){
         auth=true
     }
@@ -71,4 +66,4 @@ const Toolbar = (props)=>{
         </header>
     )
 }
-export default withRouter(React.memo(Toolbar));
+export default React.memo(Toolbar);
