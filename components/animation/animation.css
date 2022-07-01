@@ -1,0 +1,116 @@
+.box{
+    width: 60%;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+    margin-top: 95px;
+    border-radius: 5px;
+    background-color: blue;
+    color:#FFF;
+    direction: rtl;
+}
+.slide{
+    animation: slide 1s ease-out forwards;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0%)
+    }
+    100%{
+        transform: translateX(60px)
+    }
+}
+.flip{
+    animation: flip 1s ease-out alternate 2;
+}
+@keyframes flip{
+    from{
+        transform: rotateY(0deg)
+    }
+    to{
+        transform: rotateY(180deg)
+    }
+}
+.example-enter {
+    opacity: 0.01;
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .example-leave {
+    opacity: 1;
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+  .example-appear {
+    opacity: 0.01;
+  }
+  
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+  .slide-enter{
+    transform: translateX(-100%)
+  }
+  .slide-enter-active{
+    animation: slide-in 500ms ease-out forwards;
+  }
+  .slide-leave{
+    transform: translateX(0%)
+  }
+  .slide-leave-active{
+    animation: slide-out 300ms ease-out forwards;
+  }
+  @keyframes slide-in{
+    from{
+      transform: translateX(-100%)
+    }
+    to{
+      transform: translateX(0%)
+    }
+  }
+  @keyframes slide-out{
+    from{
+      transform: translateX(0%)
+    }
+    to{
+      transform: translateX(100%)
+    }
+  }
+
+  .flip-enter{
+    transform: rotateY(180deg);
+  }
+  .flip-enter-active{
+    animation: flip-in 2000ms ease-out forwards;
+  }
+  .flip-leave{
+    transform: rotateY(0deg);
+  }
+  .flip-leave-active{
+    animation: flip-out 3000ms ease-out forwards;
+  }
+  @keyframes flip-in{
+    from{
+      transform: rotateY(180deg);
+    }
+    to{
+      transform: rotateY(0deg);
+    }
+  }
+  @keyframes flip-out{
+    from{
+      transform: rotateY(0deg);
+    }
+    to{
+      transform: rotateY(90deg);
+    }
+  }
