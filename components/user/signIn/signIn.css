@@ -1,0 +1,35 @@
+input{
+    width: 95%;
+    height: 45px;
+    border-radius: 5px;
+    padding: 5px;
+    border:1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+    margin: 10px auto;
+    direction: ltr;
+}
+.captcha_view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    width:95%;
+}
+.captcha_view input{
+    width:70%
+}
+.captcha_view img{
+    width:42px;
+    height: 42px;
+    margin: 5px;
+}
+.captcha_view p{
+    font-size: 22px;
+    text-align: center;
+    color: #000;
+    direction: ltr;
+
+}
