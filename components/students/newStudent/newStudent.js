@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import classes from './newStudent.module.css';
 import Button from '../../UI/button/button';
 import WithClass from '../../hoc/WithClass';
-import {withRouter} from 'react-router-dom'
+
 const NewStudent =(props)=>{
     useEffect(()=>{
         console.log(props)
@@ -25,4 +25,4 @@ const NewStudent =(props)=>{
             </React.Fragment>
     )
 }
-export default React.memo(withRouter(WithClass(NewStudent, classes.NewPost)));
+export default React.memo(WithClass(NewStudent, classes.NewPost));
