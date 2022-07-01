@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useContext} from 'react';
 import NewStudent from '../components/students/newStudent/newStudent';
-import {withRouter} from 'react-router-dom';
+
 
 
 const AddStudent = (props)=>{
@@ -68,4 +68,4 @@ const AddStudent = (props)=>{
         
     )
 }
-export default withRouter(AddStudent);
+export default AddStudent;
